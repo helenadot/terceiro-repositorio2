@@ -66,21 +66,21 @@ body{
     padding: 24px;
 }
 
-. parametro-titulo{
+. parametro-titulo {
     font-family: var(--roboto-mono);
     font-size: 28px;
 }
 
-. parametro-senha__titulo{
+. parametro-senha__titulo {
     font-size:24px;
 }
 
-. parametro-coluna__senha{
+. parametro-coluna__senha {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-. parametro-senha{
+. parametro-senha {
     width: 50%;
     margin: 0 auto;
 }
