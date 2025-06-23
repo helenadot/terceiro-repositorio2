@@ -1,23 +1,23 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto');
-let tamanhoSenha = 12; 
+let tamanhoSenha = 12;
 numeroSenha.textContent = tamanhoSenha;
 
-const botoes = document.querySelectorAll ('.parametro-senha__botao');
+const botoes = document.querySelectorAll('.parametro-senha__botao');
 
 botoes[0].onclick = diminuiTamanho;
-botoes[1].onclick = aumentaTAmanho;
+botoes[1].onclick = aumentaTamanho;
 
-function diminuiTamanho () {
+function diminuiTamanho() {
     if (tamanhoSenha > 1) {
-    tamanhoSenha--;
+        tamanhoSenha--;
+    }
     numeroSenha.textContent = tamanhoSenha;
-}
-geraSenha();
+    geraSenha();
 }
 
-function aumentaTamanho () {
+function aumentaTamanho() {
     if (tamanhoSenha < 20){
-    tamanhoSenha++;
+        tamanhoSenha++;
     }
     numeroSenha.textContent = tamanhoSenha;
     geraSenha();
@@ -27,11 +27,12 @@ const campoSenha = document.querySelector('#campo-senha');
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 geraSenha();
 
-campoSenha.value = letrasMaiusculas;
-
 function geraSenha() {
-    for(let  i=0; i < tamanhoSenha;  i++) {
+    let senha = '' ;
+    for(let i=0; i < tamanhoSenha; i++) {
         let numeroAleatorio = Math.random()*letrasMaiusculas.length;
         numeroAleatorio = Math.floor(numeroAleatorio);
-    } 
+        senha = senha + letrasMaiusculas[numeroAleatorio];
+    }
+    campoSenha.value = senha; 
 }
