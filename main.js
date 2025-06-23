@@ -18,4 +18,4 @@ function aumentaTamanho () {
     tamanhoSenha = tamanhoSenha + 1;
     numeroSenha.textContent = tamanhoSenha;
 }
-numeroSenha.textContent = tamanhoSenha; 
+numeroSenha.textContent = tamanhoSenha;
